@@ -1,0 +1,581 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Runway</title>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<!-- js -->
+ <script src="js/jquery.min.js"></script>
+<!-- //js --> 
+<!-- font-awesome-icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome-icons -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="//fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+
+		
+	
+	<script>
+	$(document).ready(function() {
+    var max_fields      = 10; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+    var add_button      = $(".add_field_button"); //Add button ID
+	var add_button2		= $(".add_field_button2");
+   
+    var x = 1; //initlal text box count
+	
+	
+   $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+	
+		     //text box increment
+            $(wrapper).append('<div><div class="row-margin-50"><p><h5 style="color:rgb(136, 11, 84)">(More Ongoing Work)</h5></p></div><div class="form-group row row-margin-30"><label class="col-sm-3 col-form-label">Name Of The Work/Project</label><div class="col-sm-9"><input type="text" class="form-control" placeholder="Enter Name Of The Work/Project" name="pwd" required="" /></div></div><div class="form-group row"><label class="col-sm-3 col-form-label">Name Of The Employer</label><div class="col-sm-9"><input type="text" class="form-control" placeholder="Enter Name Of The Employer" name="pwd" required="" /></div></div><div class="form-group row"><label class="col-sm-3 col-form-label">Percentage Of Participation Of Bidder</label><div class="col-sm-9"><input type="text" class="form-control" placeholder="Enter Percentage Of Participation" name="pwd" required="" /></div></div><div class="form-group row"><label class="col-sm-3 col-form-label">Stipulate Period of Completion as Per Aggrement</label><div class="col-sm-9"><input type="text" class="form-control" placeholder="Enter Stipulate Period of Completion as Per Aggrement" name="pwd" required="" /></div></div><div class="form-group row"><label class="col-sm-3 col-form-label">Value Of Contract As Per Aggrement</label><div class="col-sm-9"><input type="number" class="form-control" placeholder="Enter Value Of Contract As Per Aggrement" name="pwd" required="" /></div></div><div class="form-group row"><label class="col-sm-3 col-form-label">Value Of Work Completed</label><div class="col-sm-9"><input type="number" class="form-control" placeholder="Enter Value Of Work Completed" name="pwd" required="" /></div></div><div class="form-group row"><label class="col-sm-3 col-form-label">Balance Value Of To Be Completed</label><div class="col-sm-9"><input type="number" class="form-control" placeholder="Enter Balance Value Of To Be Completed" name="pwd" required="" /></div></div><div class="form-group row"><label class="col-sm-3 col-form-label">Anticipated Work Of Completion</label><div class="col-sm-9"><input type="number" class="form-control" placeholder="Enter Anticipated Work Of Completion" name="pwd" required="" /></div></div><div class="form-group row"><label class="col-sm-3 col-form-label">Finacial Liability</label><div class="col-sm-9"><input type="number" class="form-control" placeholder="Enter Finacial Liability" name="pwd" required="" /></div></div><a href="#" class="remove_field">Remove</a></div>'); //add input box
+            x++; 
+	  }
+    });
+   
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+       
+		e.preventDefault(); 
+		$(this).parent('div').remove(); 
+		x--;
+    })
+});
+	
+</script>
+</head>
+<body>
+	<div class="main">
+		<h1 style="color:black">PWD FORM</h1>
+		<div class="w3_agile_main_grids">
+		
+			<div id='progress'><div id='progress-complete'></div></div>
+			
+			<form id="SignupForm" action="#" class="agile_form was-validated" method="post" enctype="multipart/form-data">
+				<fieldset>
+					<h3>Bidder information</h3>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Company Name</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Company Name" name="pwd" required="" />
+						</div>
+					</div>  
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Company Pan</label>
+						<div class="col-sm-9">
+							<input type="text" pattern="[A-Z]+[A-Z]+[A-Z]+[A-Z]+[A-Z]+[0-9]+[0-9]+[0-9]+[0-9]+[A-Z]" class="form-control" placeholder="Enter Company Pan" name="pwd" required="" />
+						</div>
+					</div>	
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Email</label>
+						<div class="col-sm-9">
+							<input type="email" class="form-control" placeholder="Enter Email" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Name of Signatory</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Name of Signatory" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Capacity of Signatory</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Capacity of Signatory" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Telephone Number</label>
+						<div class="col-sm-9">
+							<input type="tel" pattern=".{10}" class="form-control" placeholder="Enter Telephone Number" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Fax</label>
+						<div class="col-sm-9">
+							<input type="number" class="form-control" placeholder="Enter Fax" name="pwd" />
+						</div>
+					</div>
+					<div class="clear"> </div>
+				</fieldset>
+					
+				<fieldset>
+					<h3>Financial information</h3>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Name & Address Of Banker</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Name & Address Of Banker" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Uncommitted Bank Guarantees(Rs.)</label>
+						<div class="col-sm-9">
+							<input type="number" class="form-control" placeholder="Enter Uncommitted Bank Guarantees" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Credit facilities(Rs.)</label>
+						<div class="col-sm-9">
+							<input type="number" class="form-control" placeholder="Enter Credit facilities" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Total Liquid Assets(Rs.)</label>
+						<div class="col-sm-9">
+							<input type="number" class="form-control" placeholder="Enter Total Liquid Assets" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="row-margin-30">
+						<p><h5 style="color:brown">Value of Engineering works undertaken w.r.t. projects (Rs in Crore)</h5></p>
+						<div class="form-group row">
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2020-21)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2019-20)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2018-19)" name="pwd" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2017-18)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2016-17)" name="pwd" />
+							</div>
+						</div>
+					</div>
+					<div class="row-margin-30">
+						<p><h5 style="color:brown">Value of Engineering works(Rs in Crore)</h5></p>
+						<div class="form-group row">
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2020-21)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2019-20)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2018-19)" name="pwd" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2017-18)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2016-17)" name="pwd" />
+							</div>
+						</div>
+					</div>
+					<div class="row-margin-50">
+						<p><h3 style="color:brown">Financial Data For The Last  Audited Financial Years</h3></p>
+					</div>	
+					<div class="row-margin-30">
+						<p><h5 style="color:rgb(136, 11, 84)">Net Worth (Calculated On The Basis Of Capital, Profit & Free Reserve Available To Be Firm to Be Positive)</h5></p>
+						<div class="form-group row">
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2020-21)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2019-20)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2018-19)" name="pwd" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2017-18)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2016-17)" name="pwd" />
+							</div>
+						</div>
+					</div>
+					<div class="row-margin-50">
+						<p><h5 style="color:rgb(136, 11, 84)">Working Capital</h5></p>
+						<div class="form-group row">
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2020-21)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2019-20)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2018-19)" name="pwd" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2017-18)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2016-17)" name="pwd" />
+							</div>
+						</div>
+					</div>	
+					<div class="row-margin-50">
+						<p><h5 style="color:rgb(136, 11, 84)">Annual Turnover(Engineering Work)</h5></p>
+						<div class="form-group row">
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2020-21)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2019-20)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2018-19)" name="pwd" />
+							</div>
+						</div>
+						<div class="form-group row">
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2017-18)" name="pwd" />
+							</div>
+							<div class="col-sm-4">
+								<input type="number" class="form-control" placeholder="(2016-17)" name="pwd" />
+							</div>
+						</div>
+					</div>
+					<div class="clear"> </div>
+				</fieldset>
+				
+				<fieldset>
+					<h3>Tender information</h3>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">eNit No</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter eNit No" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Tender Complete  Days</label>
+						<div class="col-sm-9">
+							<input type="number" class="form-control" placeholder="Enter Tender Complete  Days" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Work Sl. No</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Work Sl. No" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Tender Id</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Tender Id" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="clear"> </div>
+				</fieldset>
+
+				<fieldset>
+					<h3>Lease information</h3>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Aggrement Amount</label>
+						<div class="col-sm-9">
+							<input type="number" class="form-control" placeholder="Enter Aggrement Amount" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Name of Lessor firm/company</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Name of Lessor firm/company" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Name of Signatory</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Name of Signatory" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Capacity</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Capacity" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Pan</label>
+						<div class="col-sm-9">
+							<input type="text" pattern="[A-Z]+[A-Z]+[A-Z]+[A-Z]+[A-Z]+[0-9]+[0-9]+[0-9]+[0-9]+[A-Z]" class="form-control" placeholder="Enter Pan" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Agreement Year</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Agreement Year" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Company Address</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Company Address" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Date Of Aggrement</label>
+						<div class="col-sm-9">
+							<input type="date" class="form-control" name="pwd" required="" />
+						</div>
+					</div>
+					<!-- <div class="row-margin-50">
+						<p><h3 style="color:rgb(136, 11, 84)">LEASE MECHINERIES</h3></p>
+					</div>
+						<div class="wthree_input">
+							<input id="Name" type="text" name="Name" class="form-control" placeholder="Quantity" required="" />
+						</div>
+						<div class="wthree_input">
+							<input id="Name" type="text" name="Name" class="form-control" placeholder="Capacity" required="" />
+						</div>
+						<div class="wthree_input">
+							<input id="Name" type="text" name="Name" class="form-control" placeholder="Name of Machine" required="" />
+						</div>
+						<div class="wthree_input">
+							<input id="Name" type="text" name="Name" class="form-control" placeholder="Machine No." required="" />
+						</div>
+						<div class="wthree_input">
+							<input id="Name" type="text" name="Name" class="form-control" placeholder="Chesis No." required="" />
+						</div>
+						<div class="wthree_input">
+							<input id="Name" type="text" name="Name" class="form-control" placeholder="Engine No." required="" />
+						</div>
+						<div class="wthree_input">
+							<input id="Name" type="text" name="Name" class="form-control" placeholder="HSN Code" required="" />
+						</div>
+						<div class="wthree_input">
+							<input id="Name" type="text" name="Name" class="form-control" placeholder="No. And Date Of The Invoice" required="" />
+						</div>
+						<div class="wthree_input">
+							<input id="Name" type="text" name="Name" class="form-control" placeholder="No And Date Of Challan" required="" />
+						</div>
+						<div class="wthree_input">
+							<input id="Name" type="text" name="Name" class="form-control" placeholder="No Of e-way Bills/Way Bill(s)" required="" />
+						</div>
+						<div class="wthree_input">
+							<input id="Name" type="text" name="Name" class="form-control" placeholder="Present Location Of Machine" required="" />
+						</div>
+						<div class="wthree_input">
+							<input id="Name" type="text" name="Name" class="form-control" placeholder="Date Of Release If Engaged" required="" />
+						</div>
+					</div> -->
+					<div class="clear"> </div>
+				</fieldset>
+
+				<fieldset>
+					<h3>Company Technical Person</h3>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Name</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Name" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Qualification</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Qualification" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Designation</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Designation" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Date Of Joining</label>
+						<div class="col-sm-9">
+							<input type="date" class="form-control" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Pan</label>
+						<div class="col-sm-9">
+							<input type="text" pattern="[A-Z]+[A-Z]+[A-Z]+[A-Z]+[A-Z]+[0-9]+[0-9]+[0-9]+[0-9]+[A-Z]" class="form-control" placeholder="Enter Pan" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Mobile No.</label>
+						<div class="col-sm-9">
+							<input type="tel" pattern=".{10}" class="form-control" placeholder="Enter Mobile No." name="pwd" required="" />
+						</div>
+					</div>	
+					<div class="form-group w3ls_description">
+						<i class="fa fa-align-right" aria-hidden="true"></i>
+						<textarea name="Message" placeholder="Your remark here..."></textarea>
+					</div>
+					<div class="clear"> </div>
+				</fieldset>
+
+				<fieldset>
+					<h3>Work Expirience</h3>
+					<div class="row-margin-50">
+						<p><h5 style="color:rgb(136, 11, 84)">(Ongoing Work)</h5></p>
+					</div>
+						<div class="input_fields_wrap">
+							<button class="add_field_button">Add More Expirience</button>
+							<div class="form-group row">
+								<label class="col-sm-3 col-form-label">Name Of The Work/Project</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="Enter Name Of The Work/Project" name="pwd" required="" />
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-3 col-form-label">Name Of The Employer</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="Enter Name Of The Employer" name="pwd" required="" />
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-3 col-form-label">Percentage Of Participation Of Bidder</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="Enter Percentage Of Participation" name="pwd" required="" />
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-3 col-form-label">Stipulate Period of Completion as Per Aggrement</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" placeholder="Enter Stipulate Period of Completion as Per Aggrement" name="pwd" required="" />
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-3 col-form-label">Value Of Contract As Per Aggrement</label>
+								<div class="col-sm-9">
+									<input type="number" class="form-control" placeholder="Enter Value Of Contract As Per Aggrement" name="pwd" required="" />
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-3 col-form-label">Value Of Work Completed</label>
+								<div class="col-sm-9">
+									<input type="number" class="form-control" placeholder="Enter Value Of Work Completed" name="pwd" required="" />
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-3 col-form-label">Balance Value Of To Be Completed</label>
+								<div class="col-sm-9">
+									<input type="number" class="form-control" placeholder="Enter Balance Value Of To Be Completed" name="pwd" required="" />
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-3 col-form-label">Anticipated Work Of Completion</label>
+								<div class="col-sm-9">
+									<input type="number" class="form-control" placeholder="Enter Anticipated Work Of Completion" name="pwd" required="" />
+								</div>
+							</div>
+							<div class="form-group row">
+								<label class="col-sm-3 col-form-label">Finacial Liability</label>
+								<div class="col-sm-9">
+									<input type="number" class="form-control" placeholder="Enter Finacial Liability" name="pwd" required="" />
+								</div>
+							</div>
+						</div>
+					<div class="clear"> </div>
+				</fieldset>
+				<fieldset>
+					<h3 class="w3_room">CA Details</h3>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Name of the Statutory Auditor’s Firm/Chartered</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Name" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Accountant</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Accountant" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Name of signatory (in capital)</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Name of signatory" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-3 col-form-label">Membership No.</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Membership No." name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Firm Regn. No</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter Firm Regn. No" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Date of Birth</label>
+						<div class="col-sm-9">
+							<input type="date" class="form-control" name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">Mobile No.</label>
+						<div class="col-sm-9">
+							<input type="tel" pattern=".{10}" class="form-control" placeholder="Enter Mobile No." name="pwd" required="" />
+						</div>
+					</div>
+					<div class="form-group row row-margin-30">
+						<label class="col-sm-3 col-form-label">UDIN</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" placeholder="Enter UDIN" name="pwd" required="" />
+						</div>
+					</div>
+					<p style="float:right;" class="row-margin-50"><input type="submit" class="btn btn-primary" value="submit"/></p>
+				</fieldset>
+	
+				
+			</form>
+			
+			<div class="agileits_copyright">
+				<p>© All rights reserved | Design by Divyanshu</p>
+			</div>
+		</div>
+	</div>
+	
+	<script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.formtowizard.js"></script>
+
+    <script>
+        $( function() {
+            var $signupForm = $( '#SignupForm' );
+
+            $signupForm.validate({errorElement: 'em'});
+
+            $signupForm.formToWizard({
+                submitButton: 'SaveAccount',
+                nextBtnClass: 'btn btn-primary next',
+                prevBtnClass: 'btn btn-default prev',
+                buttonTag:    'button',
+                validateBeforeNext: function(form, step) {
+                    var stepIsValid = true;
+                    var validator = form.validate();
+                    $(':input', step).each( function(index) {
+                        var xy = validator.element(this);
+                        stepIsValid = stepIsValid && (typeof xy == 'undefined' || xy);
+                    });
+                    return stepIsValid;
+                },
+                progress: function (i, count) {
+                    $('#progress-complete').width(''+(i/count*100)+'%');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
